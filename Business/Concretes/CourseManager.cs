@@ -23,26 +23,14 @@ public class CourseManager : ICourseService
     public async Task Add(Course course)
     {
         await _courseDal.AddAsync(course);        
-    }
-
-    //public List<CourseDetailDto> GetCourseDetail()
-    //{
-    //    return _courseDal.GetCourseDetail();
-    //}
+    }   
 
     public async Task<IPaginate<CourseDetailsDto>> GetCourseDetailList()
     {
          return await _courseDal.GetCourseDetails();
     }
 
-    //public IList<Course> GetAll()
-    //    {
-    //        //iş kodları
-    //        EfCourseDal courseDal = new EfCourseDal();
-    //        return courseDal.GetList();
-
-    //    }
-
+    
     public async Task<IPaginate<Course>> GetListAsync()
     {
         return await _courseDal.GetListAsync();

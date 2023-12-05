@@ -9,9 +9,7 @@ using System.Threading.Tasks;
 namespace Business.Abstracts;
 
 public interface ICategoryService
-{
-    //public IList<Category> GetAll();
-
+{  
     Task<IPaginate<Category>> GetListAsync();
     Task Add(Category category);
 }

@@ -10,12 +10,10 @@ using System.Threading.Tasks;
 namespace Business.Abstracts
 {
     public interface ICourseService
-    {
-        //public IList<Course> GetAll();
+    {       
 
         Task<IPaginate<Course>> GetListAsync();
-        Task Add(Course course);
-        //List<CourseDetailDto> GetCourseDetail();
+        Task Add(Course course);       
         Task<IPaginate<CourseDetailsDto>> GetCourseDetailList();
 
     }

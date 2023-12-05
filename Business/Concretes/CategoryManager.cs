@@ -22,15 +22,7 @@ public class CategoryManager : ICategoryService
     public async Task Add(Category category)
     {
         await _categortyDal.AddAsync(category);
-    }
-
-    //public IList<Course> GetAll()
-    //    {
-    //        //iş kodları
-    //        EfCourseDal courseDal = new EfCourseDal();
-    //        return courseDal.GetList();
-
-    //    }
+    }    
 
     public async Task<IPaginate<Category>> GetListAsync()
     {
