@@ -14,7 +14,7 @@ namespace Business.Abstracts
 
         Task<IPaginate<Course>> GetListAsync();
         Task Add(Course course);       
-        Task<IPaginate<CourseDetailsDto>> GetCourseDetailList();
+        Task<IPaginate<CourseDetailsDto>> GetCourseDetailListAsync();
 
     }
 }

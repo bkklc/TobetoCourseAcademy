@@ -16,7 +16,7 @@ namespace WebAPI.Controllers
         }
 
 
-        [HttpPost]
+        [HttpPost("add")]
         public async Task<IActionResult> Add([FromBody] Category category)
         {
             await _categoryService.Add(category);
@@ -24,7 +24,7 @@ namespace WebAPI.Controllers
         }
 
 
-        [HttpGet]
+        [HttpGet("getList")]
         public async Task<IActionResult> GetList()
         {
             var result = await _categoryService.GetListAsync();

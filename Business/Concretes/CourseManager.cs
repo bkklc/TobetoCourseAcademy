@@ -25,7 +25,7 @@ public class CourseManager : ICourseService
         await _courseDal.AddAsync(course);        
     }   
 
-    public async Task<IPaginate<CourseDetailsDto>> GetCourseDetailList()
+    public async Task<IPaginate<CourseDetailsDto>> GetCourseDetailListAsync()
     {
          return await _courseDal.GetCourseDetails();
     }
