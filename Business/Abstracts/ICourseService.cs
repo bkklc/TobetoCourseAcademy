@@ -1,4 +1,7 @@
-﻿using Core.Persistence.Paging;
+﻿
+using Business.DTOs.Requests;
+using Business.DTOs.Responses;
+using Core.Persistence.Paging;
 using Entities.Concretes;
 using Entities.DTOs;
 using System;
@@ -13,8 +16,11 @@ namespace Business.Abstracts
     {       
 
         Task<IPaginate<Course>> GetListAsync();
-        Task Add(Course course);       
-        Task<IPaginate<CourseDetailsDto>> GetCourseDetailListAsync();
+        Task<CreatedCourseResponse> Add(CreateCourseRequest createCourseRequest);
+
+
+        //Task Delete(Course course);       
+        //Task<IPaginate<CourseDetailsDto>> GetCourseDetailListAsync();
 
     }
 }

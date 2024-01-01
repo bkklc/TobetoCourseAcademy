@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concretes.EntityFramework;
 
-public class EfCategoryDal : EfRepositoryBase<Category,int, NorthwindContext>,ICategoryDal
+public class EfCategoryDal : EfRepositoryBase<Category, int, NorthwindContext>,ICategoryDal
 {
     public EfCategoryDal(NorthwindContext context) : base(context)
     {

@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concretes.EntityFramework
 {
-    public class EfCourseDal : EfRepositoryBase<Course, int, NorthwindContext>, ICourseDal
+    public class EfCourseDal : EfRepositoryBase<Course, Guid, NorthwindContext>, ICourseDal
     {
         NorthwindContext _context;
         public EfCourseDal(NorthwindContext context) : base(context)
@@ -30,7 +30,7 @@ namespace DataAccess.Concretes.EntityFramework
                                 join category in _context.Categories
                                 on course.CategoryId equals category.Id
                                 select new CourseDetailsDto
-                                {                                    
+                                {
                                     CategoryName = category.Name,
                                     CourseName = course.Name
                                 }).ToPaginateAsync(index, size, 0);

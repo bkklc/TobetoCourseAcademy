@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstracts;
 
-public interface ICategoryDal:IRepository<Category,int>, IAsyncRepository<Category, int>
+public interface ICategoryDal:IRepository<Category, int>, IAsyncRepository<Category, int>
 {
     
 }
